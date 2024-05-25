@@ -15,14 +15,14 @@ def upload_excel():
     try:
         df = pd.read_excel(file)
         
-        # Extrair e processar apenas a coluna Anotações de resolução
-        resolution_notes = df['Anotações de resolução'].fillna('')  # Substituir NaN por string vazia
-        other_data = df.drop('Anotações de resolução', axis=1)  # Preservar os outros dados
+        # Extrair e processar apenas a coluna AnotaÃ§Ãµes de resoluÃ§Ã£o
+        resolution_notes = df['AnotaÃ§Ãµes de resoluÃ§Ã£o'].fillna('')  # Substituir NaN por string vazia
+        other_data = df.drop('AnotaÃ§Ãµes de resoluÃ§Ã£o', axis=1)  # Preservar os outros dados
         
-        # Tratar todos os possíveis valores NaN do DataFrame
+        # Tratar todos os possÃ­veis valores NaN do DataFrame
         other_data = other_data.applymap(lambda x: '' if pd.isna(x) else x)
         
-        # Convertendo os dados relevantes para um formato JSON serializável
+        # Convertendo os dados relevantes para um formato JSON serializÃ¡vel
         data = {
             'resolution_notes': resolution_notes.tolist(),
             'other_data': other_data.to_dict(orient='records')
