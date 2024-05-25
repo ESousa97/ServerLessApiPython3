@@ -121,23 +121,21 @@ curl -X POST http://localhost:5000/upload-excel \
 
 ```bash
 
-my-nextjs-flask-app/
+ServiceUploadApi/
 │
-├── backend/
-│   ├── app.py                # Main Flask application
-│   ├── requirements.txt      # Python dependencies
-│   └── venv/                 # Python virtual environment
+├── api/
+│   └── app.py                # Main Flask application
 │
-├── frontend/
-│   ├── pages/                # Next.js pages
-│   ├── public/               # Public assets
-│   ├── styles/               # CSS styles
-│   ├── .eslintrc.json        # ESLint configuration
-│   ├── next.config.js        # Next.js configuration
-│   ├── package.json          # Node.js dependencies
-│   └── ...
+├── .eslintrc.json
+├── jsconfig.json
+├── LICENSE
+├── next.config.js        # Next.js configuration
+├── package.json          # Node.js dependencies
+├── README.md                 # This file
+├── requirements.txt      # Python dependencies
+├── vercel.json
 │
-└── README.md                 # This file
+└── ...
 
 ```
 
